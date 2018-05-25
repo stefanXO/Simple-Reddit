@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Reddit</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+	<style>
+		body {
+			width: 400px;
+			margin: auto;
+		}
+		#incognito > .hasIncognito, #incognito > .noIncognito { display: none; }
+		#incognito.hasIncognito > .hasIncognito, #incognito.noIncognito > .noIncognito { display: block; }
+		.hasIncognito strong { color: green; }
+		.noIncognito strong { color: red; }
+		.btn, .ctr {
+			text-align: center;
+		}
+		img { margin: auto; }
+		button {
+			margin: 20px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="ctr">
+		<img src="images/simpleredditlogo.png">
+		<h1>Simple Reddit</h1>
+	</div>
+	<div>Simple Reddit cleans up the new reddit layout, makes it more compact - and closer to how the old reddit layout worked. That's all.</div>
+    <section>
+          <h3>Does Simple Reddit have incognito access?</h3>
+          <div id="incognito">
+          	<div class="hasIncognito">
+          		<strong>Yes.</strong> Simple Reddit has incognito access. If you don't want to change the reddit layout in incognito tabs, then you can disable incognito access here :
+          	</div>
+          	<div class="noIncognito">
+          		<strong>No.</strong> Simple Reddit doesn't have incognito access. If you want to change the reddit layout in incognito tabs, then you can enable incognito access here :
+          	</div>
+          	<div class="btn">
+          		<button id="incognitoButton">Enable/disable incognito access</button>
+          	</div>
+          </div>
+    </section>
+
+    <section>
+          <h3>Default to the classic layout?</h3>
+          <div id="classic_layout">
+          	<div>
+          		<input type="checkbox" name="default-layout" id="default-layout" value="true"> Default to the classic layout?
+          		This will automatically switch you to the Classic layout, instead of the Card layout.
+          	</div>
+          </div>
+    </section>
+
+    <section>
+          <h3>Force the new reddit layout?</h3>
+          <div id="new_layout">
+          	<div>
+          		<input type="checkbox" name="force" id="force" value="true"> Force reddit's new layout?
+          		If you can't see reddit's new layout, or if you'd like to force it, then select this option. ( If it still doesn't work, try logging out of reddit )
+          	</div>
+          </div>
+    </section>
+    	<script type="text/javascript" src="options.js"></script>
+
+</body>
+</html>

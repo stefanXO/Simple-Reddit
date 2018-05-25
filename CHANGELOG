@@ -1,0 +1,32 @@
+v.1.0.4
+
+* Don't change colors of upvote/downvote buttons, just fade them slightly
+
+v.1.0.3
+
+* Remember if night mode was enabled, and apply day/night style right away
+* Note in options about forcing the new design ( some people don't see a difference on new.reddit.com ) : If it doesn't work at first, log out & log into reddit - then it should work
+
+v.1.0.2
+
+* Works now in night mode, yay!
+* Nicer colors in night mode - and lower opacity for less eye strain
+* Highlights visited outbound links in purple
+* Fixed layout display issues with REH ( Reddit Enhancement Suite )
+* Better at hiding useless expansion buttons
+
+v.1.0.1
+
+* Show visited headlines in purple
+* Auto-switch to the classic view ( configurable in options )
+* Allow to force the new layout to be enabled - also for users who don't have the new layout as an option yet ( configurable in options )
+* Automatically hide the left-side login menu if it's open on page load ( e.g. in Incognito window )
+   
+v.1.0.0 
+
+* Initial release
+* Fixes headlines being now shown in blue, instead of black
+* Less colors on the frontpage
+* Fade out the header and right side menu while they're not active
+* Highlight ads with a light golden background
+* Limit the size of the preview items, for a more compact experience
