@@ -29,6 +29,10 @@ div[data-reactroot] {
         opacity: 1;
     }
 
+    #header {
+        position: absolute;
+    }
+
     #header > div, #header > a {
          opacity: 0.5;
          transition: opacity 0.05s linear;

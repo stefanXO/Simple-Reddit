@@ -1,3 +1,7 @@
+v.1.0.5
+
+* The reddit header won't scroll any longer
+
 v.1.0.4
 
 * Don't change colors of upvote/downvote buttons, just fade them slightly
