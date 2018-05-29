@@ -120,6 +120,15 @@ div[data-reactroot] {
         links
     */
 
+    #USER_DROPDOWN_ID > div > div > div a:hover {
+        text-decoration: underline;
+    }
+
+    #USER_DROPDOWN_ID .customHeaderLink {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
     div[data-click-id="body"] a h2, a[data-click-id="body"] h2 {
         font-weight: normal;
         font-size: 17px;

@@ -32,6 +32,8 @@ setInterval(hideUselessExpando, 3000);
 hideHamburger();
 setTimeout(hideHamburger, 1500);
 
+attachProfileLink();
+setInterval(attachProfileLink, 1500);
 /*
 	Get local storage settings for the extension
 	Apply default layout switching if the option is set
@@ -111,6 +113,56 @@ chrome.storage.sync.get(['simple-reddit-force-layout', 'simple-reddit-default-la
 		if(!!classic) classic.click();
 	}
 });
+
+function attachProfileLink() {
+	var dropdown = document.getElementById('USER_DROPDOWN_ID');
+	if(	!!dropdown &&
+		!!dropdown.firstElementChild &&
+		!!dropdown.firstElementChild.firstElementChild &&
+		!!dropdown.firstElementChild.firstElementChild.children &&
+		!!dropdown.firstElementChild.firstElementChild.children[1]
+	) {
+		var usernameChild = dropdown.firstElementChild.firstElementChild.children[1].firstElementChild;
+		if(!!usernameChild) {
+			var username = dropdown.firstElementChild.firstElementChild.children[1].firstElementChild.innerText;
+			if(!username || username.length < 1 || username.indexOf("\n") > -1 || username.indexOf("|") > -1) return;
+
+			var a = document.createElement('a');
+			var linkText = document.createTextNode(username);
+			a.appendChild(linkText);
+			a.title = username;
+			a.href = "/user/" + username;
+			usernameChild.innerText = "";
+			usernameChild.appendChild(a);
+
+			usernameChild.innerHTML += " (";
+
+			var b = document.createElement('a');
+			var linkText = document.createTextNode("p");
+			b.appendChild(linkText);
+			b.title = "Your Posts";
+			b.className = "customHeaderLink";
+			b.href = "/user/" + username + "/posts/";
+			usernameChild.appendChild(b);
+
+			usernameChild.innerHTML += "|";
+
+			var c = document.createElement('a');
+			var linkText = document.createTextNode("c");
+			c.appendChild(linkText);
+			c.title = "Your Comments";
+			c.className = "customHeaderLink";
+			c.href = "/user/" + username + "/comments/";
+			usernameChild.appendChild(c);
+
+			usernameChild.innerHTML += ")";
+
+			usernameChild.onclick = function(e) {
+				e.stopPropagation();
+			};
+		}
+	}
+}
 
 function hideHamburger() {
 	var ham = document.getElementById('hamburgers');

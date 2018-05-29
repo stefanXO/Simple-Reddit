@@ -83,6 +83,11 @@ div[data-reactroot] {
     background: transparent;
     margin-left: 10px;
     margin-right: 10px; }
+  div[data-reactroot] #USER_DROPDOWN_ID > div > div > div a:hover {
+    text-decoration: underline; }
+  div[data-reactroot] #USER_DROPDOWN_ID .customHeaderLink {
+    margin-left: 3px;
+    margin-right: 3px; }
   div[data-reactroot] div[data-click-id="body"] a h2, div[data-reactroot] a[data-click-id="body"] h2 {
     font-weight: normal;
     font-size: 17px;
