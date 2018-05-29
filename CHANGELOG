@@ -1,3 +1,8 @@
+v.1.0.6
+
+* Make the profile link in the top right header send you to your profile right away, instead of opening the menu
+* Adds shortcuts that send you to your comments and posts page
+
 v.1.0.5
 
 * The reddit header won't scroll any longer
