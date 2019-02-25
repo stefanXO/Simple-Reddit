@@ -1,3 +1,31 @@
+v.1.0.11
+
+* Adjust styles to recent reddit changes
+
+v.1.0.10
+
+* Sets the lightbox background to white
+
+v.1.0.9
+
+* Sets the lightbox to maximum 80% width
+* If you click on a lightbox background, it will close the lightbox
+* Small fixes to "reply links" in the popup, as they sent you nowhere
+* Fixes for utf-8 characters in the popup
+
+v.1.0.8
+
+* Adds a popup that shows you your latest inbox, posts and comments if you're logged in
+* Fixes for the changed layout - fading out the header and side-bars now properly
+
+v.1.0.7
+
+* Adds color coding to comments based on the amount of points they got
+* Quick icons to comments and posts added to the nav bar
+* Fixed some expandos ( image preview buttons ) hiding for no reason
+* Adjusted styles based on recent reddit updates
+* Adjusted border colors for images
+
 v.1.0.6
 
 * Make the profile link in the top right header send you to your profile right away, instead of opening the menu

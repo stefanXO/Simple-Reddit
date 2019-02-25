@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Simple Reddit",
   "short_name": "Simple Reddit",
-  "version": "1.0.6",
+  "version": "1.0.11",
   "description": "Simplify the new Reddit layout.",
   "content_scripts": [
     {
