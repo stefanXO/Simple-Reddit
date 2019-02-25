@@ -121,6 +121,7 @@ chrome.storage.sync.get(['simple-reddit-force-layout', 'simple-reddit-default-la
 function attachLinks() {
 	nameMainDiv();
 	attachProfileLink();
+	attachMenu();
 	colorCodes();
 }
 
@@ -181,32 +182,88 @@ function attachProfileLink() {
 			usernameChild.innerText = "";
 			usernameChild.appendChild(a);
 
-			usernameChild.innerHTML += " (";
+			// usernameChild.innerHTML += " (";
 
-			var b = document.createElement('a');
-			var linkText = document.createTextNode("p");
-			b.appendChild(linkText);
-			b.title = "Your Posts";
-			b.className = "customHeaderLink";
-			b.href = "/user/" + username + "/posts/";
-			usernameChild.appendChild(b);
+			// var b = document.createElement('a');
+			// var linkText = document.createTextNode("p");
+			// b.appendChild(linkText);
+			// b.title = "Your Posts";
+			// b.className = "customHeaderLink";
+			// b.href = "/user/" + username + "/posts/";
+			// usernameChild.appendChild(b);
 
-			usernameChild.innerHTML += "|";
+			// usernameChild.innerHTML += "|";
 
-			var c = document.createElement('a');
-			var linkText = document.createTextNode("c");
-			c.appendChild(linkText);
-			c.title = "Your Comments";
-			c.className = "customHeaderLink";
-			c.href = "/user/" + username + "/comments/";
-			usernameChild.appendChild(c);
+			// var c = document.createElement('a');
+			// var linkText = document.createTextNode("c");
+			// c.appendChild(linkText);
+			// c.title = "Your Comments";
+			// c.className = "customHeaderLink";
+			// c.href = "/user/" + username + "/comments/";
+			// usernameChild.appendChild(c);
 
-			usernameChild.innerHTML += ")";
+			// usernameChild.innerHTML += ")";
 
 			usernameChild.onclick = function(e) {
 				e.stopPropagation();
 			};
 		}
+	}
+}
+
+function attachMenu() {
+	if(!window.username) return;
+	if(
+		!!document.getElementById('USER_DROPDOWN_ID')
+		&& !!document.getElementById('USER_DROPDOWN_ID').parentElement
+		&& !!document.getElementById('USER_DROPDOWN_ID').parentElement.parentElement
+		&& document.getElementsByClassName('top-right-menu-icon').length == 0
+	) {
+
+
+		var c = document.createElement('span');
+		c.className = "top-right-menu-icon";
+		var html = `
+				<a href="/user/`+window.username+`/posts" title="Posts">
+					<span>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+						<g>
+							<path style="fill:#1a1a1b;" d="M0,16.207c0-8.822,7.178-16,16-16h25c8.822,0,17,7.178,17,16v16c0,8.485-7.644,15.429-16,15.949
+								v-3.949c0-0.553-0.448-1-1-1s-1,0.447-1,1v4v1v8.586l-1.359-1.359c-5.306-5.305-12.359-8.227-19.86-8.227H16
+								c-8.822,0-16-7.178-16-16L0,16.207z"/>
+						</svg>
+					</span>
+				</a>
+		`;
+		c.innerHTML = html;
+		document.getElementById('USER_DROPDOWN_ID').parentElement.parentElement.insertBefore(c, document.getElementById('USER_DROPDOWN_ID').parentElement);
+
+
+		var c = document.createElement('span');
+		c.className = "top-right-menu-icon";
+		var html = `
+				<a href="/user/`+window.username+`/comments" title="Comments">
+					<span>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+							<g>
+								<path style="fill:#1a1a1b;" d="M48,19.929v21.141C48,43.793,45.793,46,43.071,46H22L12,57V46H4.929C2.207,46,0,43.793,0,41.071
+									l0-21.141C0,17.207,2.207,15,4.929,15h38.141C45.793,15,48,17.207,48,19.929z"/>
+								<path style="fill:#3d8cde;" d="M53.071,1H14.929C12.207,1,10,3.207,10,5.93V15h33.071C45.793,15,48,17.207,48,19.93V32h5.071
+									C55.793,32,58,29.793,58,27.07V5.93C58,3.207,55.793,1,53.071,1z"/>
+								<circle style="fill:#FFFFFF;" cx="11" cy="31" r="3"/>
+								<circle style="fill:#FFFFFF;" cx="24" cy="31" r="3"/>
+								<circle style="fill:#FFFFFF;" cx="37" cy="31" r="3"/>
+							</g>
+						</svg>
+					</span>
+				</a>
+		`;
+		c.innerHTML = html;
+		document.getElementById('USER_DROPDOWN_ID').parentElement.parentElement.insertBefore(c, document.getElementById('USER_DROPDOWN_ID').parentElement);
+
+
 	}
 }
 
