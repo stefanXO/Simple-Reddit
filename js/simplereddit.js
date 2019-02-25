@@ -119,6 +119,7 @@ chrome.storage.sync.get(['simple-reddit-force-layout', 'simple-reddit-default-la
 });
 
 function attachLinks() {
+	nameMainDiv();
 	attachProfileLink();
 	colorCodes();
 }
@@ -144,6 +145,18 @@ function colorCodes() {
 			}
 		}
 	});
+}
+
+function nameMainDiv() {
+	var maindiv = document.getElementById('2x-container');
+	if( !maindiv ) {
+		maindiv = document.getElementsByTagName('div')[0];
+	}
+	if( !!maindiv ) {
+		if(maindiv.className.indexOf('redditmaindiv') < 0) {
+			maindiv.className += " redditmaindiv";
+		}
+	}
 }
 
 function attachProfileLink() {
