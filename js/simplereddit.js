@@ -283,10 +283,18 @@ function hideHamburger() {
 }
 
 function hideUselessExpando() {
+	if(typeof tinycolor === "undefined") return;
 	var expandos = document.getElementsByClassName('icon-expandoArrowExpand');
-	for (var i =expandos.length - 1; i >= 0; i--) {
-		if(!expandos[i].parentElement.hasAttribute('data-click-id')) {
-			expandos[i].parentElement.style.display = "none";
+	for (var i = expandos.length - 1; i >= 0; i--) {
+		if(expandos[i].parentElement.hasAttribute('data-click-id')) {
+			// these are ok, they have something to do
+		}else if(expandos[i].parentElement.style.display == ""){
+			var rgb = window.getComputedStyle(expandos[i], null).getPropertyValue("color");
+			var luminance = tinycolor(rgb).getLuminance();
+			if(luminance < 0.05 || luminance > 0.85) {
+				// hide;
+				expandos[i].parentElement.style.display = "none";
+			}
 		}
 	};
 }
@@ -320,6 +328,12 @@ function nightMode() {
 	if (!!document.body && document.body.classList.contains('sr-nightmode')) return;
 	if (!!document.body) document.body.classList.add('sr-nightmode');
 	chrome.storage.sync.set({"simple-reddit-night-mode": true}, function() {});
+}
+
+window.onload  = function() {
+
+
+	hideUselessExpando();
 }
 
 console.log("Simple Reddit loaded")
