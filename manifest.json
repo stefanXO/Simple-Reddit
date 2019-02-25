@@ -16,6 +16,9 @@
 	"icons": {
 		"128": "images/simpleredditlogo.png"
 	},
+  "background": {
+    "page" : "background.html"
+  },
 	"browser_action": {
 		"default_icon": {
 			"128": "images/simpleredditlogo.png"
