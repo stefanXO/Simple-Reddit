@@ -120,9 +120,31 @@ chrome.storage.sync.get(['simple-reddit-force-layout', 'simple-reddit-default-la
 
 function attachLinks() {
 	attachProfileLink();
+	colorCodes();
 }
 
 window.username = "";
+
+function colorCodes() {
+	var spans = document.querySelectorAll('span');
+	spans.forEach(function(span) {
+		var textContent = [].reduce.call(span.childNodes, function(a, b) { return a + (b.nodeType === 3 ? b.textContent : ''); }, '');
+		if(textContent.indexOf(" points") > -1) {
+			if(span.classList.contains("comments")) return;
+			var points = textContent.split(" points")[0];
+			span.classList.add("comments");
+			if(points.indexOf("-") === 0) {
+				span.classList.add("minus");
+			}else if(points.indexOf("k") > -1) {
+				span.classList.add("kk");
+			}else if(points > 99) {
+				span.classList.add("hundreds");
+			}else if(points > 9) {
+				span.classList.add("tens");
+			}
+		}
+	});
+}
 
 function attachProfileLink() {
 	var dropdown = document.getElementById('USER_DROPDOWN_ID');
