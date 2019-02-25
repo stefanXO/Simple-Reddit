@@ -1,46 +1,65 @@
+@import "font";
+
 $lightgrey: #cccccc45;
 $lightblue: #e2ebf545;
-
 $purplenight: #b192cb;
 
 html, body {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: rfont,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif !important;
+    font: rfont !important;
 }
 /*
  we only want to apply this to the new reddit
 */
 div[data-reactroot] {
 
-    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+	#SHORTCUT_FOCUSABLE_DIV > div::after {
+		background: white;
+	}
+
+    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
         left: 24px;
         right: 360px;
     }
 
-    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) {
+    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) {
         width: 95%;
     }
 
-    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2) {
+    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2) {
         opacity: 0.5;
         transition: opacity 0.05s linear;
     }
 
-    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2):hover {
+    #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2):hover {
         opacity: 1;
     }
 
-    #header {
+    header {
         position: absolute;
     }
 
-    #header > div, #header > a {
+    header > div, header > a {
          opacity: 0.5;
          transition: opacity 0.05s linear;
     }
 
-    #header:hover > div, #header:hover > a {
+    header:hover > div, header:hover > a {
          opacity: 1;
          transition: opacity 0.05s linear;
+    }
+
+    #lightbox > div:nth-child(1) {
+        max-width: 80%;
+    }
+
+    #lightbox > div:nth-child(1) > div:nth-child(2) {
+        opacity: 0.5;
+        transition: opacity 0.05s linear;
+    }
+
+    #lightbox > div:nth-child(1) > div:nth-child(2):hover {
+        opacity: 1;
     }
 
     /*
@@ -52,6 +71,31 @@ div[data-reactroot] {
     }
     #TimeSort--SortPicker:hover, #StateSort--StateSortPicker:hover, #ListingSort--SortPicker:hover, #CountrySort--CountrySortPicker:hover {
         opacity: 1;
+    }
+
+    /*
+        top right
+    */
+
+    .top-right-menu-icon {
+        margin-left: 8px;
+    }
+
+    .top-right-menu-icon a {
+        -webkit-box-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .top-right-menu-icon span {
+        width:15px;
+        height:15px;
+        padding:8px;
+    }
+
+    .top-right-menu-icon:hover {
+        background-color: rgba(26, 26, 27, 0.1);
     }
 
     /*
@@ -107,7 +151,7 @@ div[data-reactroot] {
     #SHORTCUT_FOCUSABLE_DIV > div > div > div > div > div > div:before,
     #SHORTCUT_FOCUSABLE_DIV > div > div > div > div > div > div,
     #SHORTCUT_FOCUSABLE_DIV > div > div > div > div > div > div > div {
-        background: transparent;
+        // background: transparent;
     }
 
     .scrollerItem:nth-child(1) {
@@ -132,7 +176,7 @@ div[data-reactroot] {
     div[data-click-id="body"] a h2, a[data-click-id="body"] h2 {
         font-weight: normal;
         font-size: 17px;
-        font-family: sans-serif;
+        font-family: rfont,sans-serif;
         background-color: transparent;
     }
     div[data-click-id="body"] a:hover h2, a[data-click-id="body"]:hover h2 {
@@ -197,14 +241,14 @@ div[data-reactroot] {
     .scrollerItem span, #TimeSort--SortPicker span, #StateSort--StateSortPicker span, #ListingSort--SortPicker span, #CountrySort--CountrySortPicker span {
         font-size: 10px !important;
         text-transform: lowercase;
-        font-family: verdana, arial, helvetica, sans-serif;
+        font-family: rfont,verdana, arial, helvetica, sans-serif;
     }
 
 
     div[data-click-id="body"] div:nth-child(2) > *, div[data-click-id="body"] div:nth-child(2) > div > a, div[data-click-id="body"] div:nth-child(2) > div > span {
         font-size: 10px !important;
         text-transform: lowercase;
-        font-family: verdana, arial, helvetica, sans-serif;
+        font-family: rfont,verdana, arial, helvetica, sans-serif;
     }
 
     div[data-click-id="body"] a[rel="noopener noreferrer"] {
@@ -213,6 +257,27 @@ div[data-reactroot] {
 
     div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
         font-size: 10px;
+    }
+
+    span.comments {
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+    span.comments.hundreds {
+        color: green;
+    }
+
+    span.comments.kk {
+        color: darkorange;
+    }
+
+    span.comments.tens {
+        color: blue;
+    }
+
+    span.comments.minus {
+        color: darkred;
     }
 
     /*
@@ -292,6 +357,9 @@ div[data-reactroot] {
         max-width: 600px !important;
         max-height: 400px !important;
     }
+    .scrollerItem .media-element img {
+    	max-height: 100% !important;
+    }
     .scrollerItem div[data-click-id="media"] > div:nth-child(2) {
         max-width: 600px !important;
         max-height: 400px !important;
@@ -320,7 +388,7 @@ div[data-reactroot] {
         color: #009933;
         font-weight: normal;
         font-size: 17px;
-        font-family: sans-serif;
+        font-family: rfont,sans-serif;
     }
     .promotedlink div[data-click-id="body"] a:hover h2 {
         color: #00933B;
@@ -372,7 +440,7 @@ body:not(.sr-nightmode) div[data-reactroot] {
         div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {        color: purple;       }
 
         div[data-click-id="image"] {
-            border-color: white;
+            border-color: white !important;
         }
 
         #lightbox > div {
@@ -404,7 +472,7 @@ body.sr-nightmode div[data-reactroot] {
         div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {        color: $purplenight;       }
 
         div[data-click-id="image"] {
-            border-color: #111;
+            border-color: #111 !important;
         }
         .scrollerItem:hover {
             a {
