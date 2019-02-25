@@ -11,7 +11,7 @@ html, body {
 /*
  we only want to apply this to the new reddit
 */
-div[data-reactroot] {
+.redditmaindiv {
 
 	#SHORTCUT_FOCUSABLE_DIV > div::after {
 		background: white;
@@ -403,7 +403,7 @@ div[data-reactroot] {
     /*
         colors
     */
-body:not(.sr-nightmode) div[data-reactroot] {
+body:not(.sr-nightmode) .redditmaindiv {
 
         .scrollerItem:hover {
             background-color: $lightblue !important;
@@ -433,7 +433,7 @@ body:not(.sr-nightmode) div[data-reactroot] {
             color: grey;
         }
 
-        div[data-reactroot] a[data-click-id="body"]:visited h2 {     color: purple;   }
+        .redditmaindiv a[data-click-id="body"]:visited h2 {     color: purple;   }
         .visited, .visited h2 {    color: purple !important;    }
         .Comment p a:visited { color: purple !important; }
         div[data-click-id="body"] a:visited h2, a[data-click-id="body"]:visited h2 {      color: purple !important;    }
@@ -456,7 +456,7 @@ body:not(.sr-nightmode) div[data-reactroot] {
 
 }
 
-body.sr-nightmode div[data-reactroot] {
+body.sr-nightmode .redditmaindiv {
         .scrollerItem {
             opacity: 0.8;
         }
@@ -465,7 +465,7 @@ body.sr-nightmode div[data-reactroot] {
             background-color: #44465a !important;
         }
         div[data-click-id="body"] a h2, a[data-click-id="body"] h2 {   color: #fefefe;   }
-        div[data-reactroot] a[data-click-id="body"]:visited h2 {     color: $purplenight;   }
+        .redditmaindiv a[data-click-id="body"]:visited h2 {     color: $purplenight;   }
         .visited, .visited h2 {    color: $purplenight !important;    }
         .Comment p a:visited { color: $purplenight !important; }
         div[data-click-id="body"] a:visited h2, a[data-click-id="body"]:visited h2 {      color: $purplenight !important;    }

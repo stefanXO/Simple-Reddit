@@ -10,7 +10,7 @@ html, body {
 /*
  we only want to apply this to the new reddit
 */
-div[data-reactroot] {
+.redditmaindiv {
   /*
       category buttons in the top left
   */
@@ -35,101 +35,101 @@ div[data-reactroot] {
   /*
       comment and share buttons
   */ }
-  div[data-reactroot] #SHORTCUT_FOCUSABLE_DIV > div::after {
+  .redditmaindiv #SHORTCUT_FOCUSABLE_DIV > div::after {
     background: white; }
-  div[data-reactroot] #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  .redditmaindiv #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
     left: 24px;
     right: 360px; }
-  div[data-reactroot] #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) {
+  .redditmaindiv #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) {
     width: 95%; }
-  div[data-reactroot] #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2) {
+  .redditmaindiv #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2) {
     opacity: 0.5;
     transition: opacity 0.05s linear; }
-  div[data-reactroot] #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2):hover {
+  .redditmaindiv #SHORTCUT_FOCUSABLE_DIV:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) div > div:nth-child(3) > div:nth-child(2):hover {
     opacity: 1; }
-  div[data-reactroot] header {
+  .redditmaindiv header {
     position: absolute; }
-  div[data-reactroot] header > div, div[data-reactroot] header > a {
+  .redditmaindiv header > div, .redditmaindiv header > a {
     opacity: 0.5;
     transition: opacity 0.05s linear; }
-  div[data-reactroot] header:hover > div, div[data-reactroot] header:hover > a {
+  .redditmaindiv header:hover > div, .redditmaindiv header:hover > a {
     opacity: 1;
     transition: opacity 0.05s linear; }
-  div[data-reactroot] #lightbox > div:nth-child(1) {
+  .redditmaindiv #lightbox > div:nth-child(1) {
     max-width: 80%; }
-  div[data-reactroot] #lightbox > div:nth-child(1) > div:nth-child(2) {
+  .redditmaindiv #lightbox > div:nth-child(1) > div:nth-child(2) {
     opacity: 0.5;
     transition: opacity 0.05s linear; }
-  div[data-reactroot] #lightbox > div:nth-child(1) > div:nth-child(2):hover {
+  .redditmaindiv #lightbox > div:nth-child(1) > div:nth-child(2):hover {
     opacity: 1; }
-  div[data-reactroot] #TimeSort--SortPicker, div[data-reactroot] #StateSort--StateSortPicker, div[data-reactroot] #ListingSort--SortPicker, div[data-reactroot] #CountrySort--CountrySortPicker {
+  .redditmaindiv #TimeSort--SortPicker, .redditmaindiv #StateSort--StateSortPicker, .redditmaindiv #ListingSort--SortPicker, .redditmaindiv #CountrySort--CountrySortPicker {
     opacity: 0.5;
     transition: opacity 0.05s linear; }
-  div[data-reactroot] #TimeSort--SortPicker:hover, div[data-reactroot] #StateSort--StateSortPicker:hover, div[data-reactroot] #ListingSort--SortPicker:hover, div[data-reactroot] #CountrySort--CountrySortPicker:hover {
+  .redditmaindiv #TimeSort--SortPicker:hover, .redditmaindiv #StateSort--StateSortPicker:hover, .redditmaindiv #ListingSort--SortPicker:hover, .redditmaindiv #CountrySort--CountrySortPicker:hover {
     opacity: 1; }
-  div[data-reactroot] .top-right-menu-icon {
+  .redditmaindiv .top-right-menu-icon {
     margin-left: 8px; }
-  div[data-reactroot] .top-right-menu-icon a {
+  .redditmaindiv .top-right-menu-icon a {
     -webkit-box-align: center;
     align-items: center;
     display: flex;
     flex-direction: row; }
-  div[data-reactroot] .top-right-menu-icon span {
+  .redditmaindiv .top-right-menu-icon span {
     width: 15px;
     height: 15px;
     padding: 8px; }
-  div[data-reactroot] .top-right-menu-icon:hover {
+  .redditmaindiv .top-right-menu-icon:hover {
     background-color: rgba(26, 26, 27, 0.1); }
-  div[data-reactroot] #layoutSwitch--compact, div[data-reactroot] #layoutSwitch--card, div[data-reactroot] #layoutSwitch--classic {
+  .redditmaindiv #layoutSwitch--compact, .redditmaindiv #layoutSwitch--card, .redditmaindiv #layoutSwitch--classic {
     opacity: 0.5;
     transition: opacity 0.05s linear; }
-  div[data-reactroot] #layoutSwitch--compact:hover, div[data-reactroot] #layoutSwitch--card:hover, div[data-reactroot] #layoutSwitch--classic:hover {
+  .redditmaindiv #layoutSwitch--compact:hover, .redditmaindiv #layoutSwitch--card:hover, .redditmaindiv #layoutSwitch--classic:hover {
     opacity: 1; }
-  div[data-reactroot] .scrollerItem button[data-click-id="expando_open"] {
+  .redditmaindiv .scrollerItem button[data-click-id="expando_open"] {
     background: rgba(26, 26, 27, 0.2);
     color: #fff;
     transition: all 0.05s linear;
     margin-right: 6px; }
-  div[data-reactroot] .scrollerItem button[data-click-id="expando_open"]:hover,
-  div[data-reactroot] .scrollerItem button[data-click-id="expando_close"] {
+  .redditmaindiv .scrollerItem button[data-click-id="expando_open"]:hover,
+  .redditmaindiv .scrollerItem button[data-click-id="expando_close"] {
     background: rgba(26, 26, 27, 0.35);
     color: #fff;
     transition: all 0.05s linear;
     margin-right: 6px; }
-  div[data-reactroot] .scrollerItem button[data-click-id="expando_close"]:hover {
+  .redditmaindiv .scrollerItem button[data-click-id="expando_close"]:hover {
     background: rgba(26, 26, 27, 0.45);
     color: #fff;
     margin-right: 6px; }
-  div[data-reactroot] div:before {
+  .redditmaindiv div:before {
     opacity: 0.1; }
-  div[data-reactroot] .scrollerItem div[data-click-id="media"], div[data-reactroot] .scrollerItem div[data-click-id="media"] > div, div[data-reactroot] .scrollerItem div[data-click-id="media"] > div > div {
+  .redditmaindiv .scrollerItem div[data-click-id="media"], .redditmaindiv .scrollerItem div[data-click-id="media"] > div, .redditmaindiv .scrollerItem div[data-click-id="media"] > div > div {
     background: transparent; }
-  div[data-reactroot] .scrollerItem, div[data-reactroot] .kbjBxw, div[data-reactroot] .s14p1f57-14 {
+  .redditmaindiv .scrollerItem, .redditmaindiv .kbjBxw, .redditmaindiv .s14p1f57-14 {
     border-color: transparent !important; }
-  div[data-reactroot] .scrollerItem:nth-child(1) {
+  .redditmaindiv .scrollerItem:nth-child(1) {
     background: transparent;
     margin-left: 10px;
     margin-right: 10px; }
-  div[data-reactroot] #USER_DROPDOWN_ID > div > div > div a:hover {
+  .redditmaindiv #USER_DROPDOWN_ID > div > div > div a:hover {
     text-decoration: underline; }
-  div[data-reactroot] #USER_DROPDOWN_ID .customHeaderLink {
+  .redditmaindiv #USER_DROPDOWN_ID .customHeaderLink {
     margin-left: 3px;
     margin-right: 3px; }
-  div[data-reactroot] div[data-click-id="body"] a h2, div[data-reactroot] a[data-click-id="body"] h2 {
+  .redditmaindiv div[data-click-id="body"] a h2, .redditmaindiv a[data-click-id="body"] h2 {
     font-weight: normal;
     font-size: 17px;
     font-family: rfont,sans-serif;
     background-color: transparent; }
-  div[data-reactroot] div[data-click-id="body"] a:hover h2, div[data-reactroot] a[data-click-id="body"]:hover h2 {
+  .redditmaindiv div[data-click-id="body"] a:hover h2, .redditmaindiv a[data-click-id="body"]:hover h2 {
     text-decoration: underline;
     background-color: transparent; }
-  div[data-reactroot] div[data-click-id="body"] a:visited h2, div[data-reactroot] a[data-click-id="body"]:visited h2 {
+  .redditmaindiv div[data-click-id="body"] a:visited h2, .redditmaindiv a[data-click-id="body"]:visited h2 {
     text-decoration: underline; }
-  div[data-reactroot] a[data-click-id="subreddit"] {
+  .redditmaindiv a[data-click-id="subreddit"] {
     font-weight: normal; }
-  div[data-reactroot] a[data-click-id="subreddit"]:hover {
+  .redditmaindiv a[data-click-id="subreddit"]:hover {
     text-decoration: underline; }
-  div[data-reactroot] .scrollerItem div[data-click-id="image"] {
+  .redditmaindiv .scrollerItem div[data-click-id="image"] {
     background-color: orangered;
     animation: 0.2s background-in linear; }
 @keyframes background-in {
@@ -137,180 +137,180 @@ div[data-reactroot] {
     opacity: 0; }
   100% {
     opacity: 1; } }
-  div[data-reactroot] div[data-click-id="image"] > i.icon, div[data-reactroot] i.icon-text, div[data-reactroot] i.icon-link {
+  .redditmaindiv div[data-click-id="image"] > i.icon, .redditmaindiv i.icon-text, .redditmaindiv i.icon-link {
     color: white; }
-  div[data-reactroot] i.icon.icon-upvote {
+  .redditmaindiv i.icon.icon-upvote {
     opacity: 0.5; }
-  div[data-reactroot] i.icon.icon-upvote:hover {
+  .redditmaindiv i.icon.icon-upvote:hover {
     opacity: 1; }
-  div[data-reactroot] i.icon.icon-downvote {
+  .redditmaindiv i.icon.icon-downvote {
     opacity: 0.5; }
-  div[data-reactroot] i.icon.icon-downvote:hover {
+  .redditmaindiv i.icon.icon-downvote:hover {
     opacity: 1; }
-  div[data-reactroot] .scrollerItem > div, div[data-reactroot] .scrollerItem > div > div {
+  .redditmaindiv .scrollerItem > div, .redditmaindiv .scrollerItem > div > div {
     background: transparent; }
-  div[data-reactroot] .scrollerItem > div:nth-child(1) > div > div, div[data-reactroot] .scrollerItem > div:nth-child(1) > div > div > div {
+  .redditmaindiv .scrollerItem > div:nth-child(1) > div > div, .redditmaindiv .scrollerItem > div:nth-child(1) > div > div > div {
     color: #ccc; }
-  div[data-reactroot] .scrollerItem span, div[data-reactroot] #TimeSort--SortPicker span, div[data-reactroot] #StateSort--StateSortPicker span, div[data-reactroot] #ListingSort--SortPicker span, div[data-reactroot] #CountrySort--CountrySortPicker span {
+  .redditmaindiv .scrollerItem span, .redditmaindiv #TimeSort--SortPicker span, .redditmaindiv #StateSort--StateSortPicker span, .redditmaindiv #ListingSort--SortPicker span, .redditmaindiv #CountrySort--CountrySortPicker span {
     font-size: 10px !important;
     text-transform: lowercase;
     font-family: rfont,verdana, arial, helvetica, sans-serif; }
-  div[data-reactroot] div[data-click-id="body"] div:nth-child(2) > *, div[data-reactroot] div[data-click-id="body"] div:nth-child(2) > div > a, div[data-reactroot] div[data-click-id="body"] div:nth-child(2) > div > span {
+  .redditmaindiv div[data-click-id="body"] div:nth-child(2) > *, .redditmaindiv div[data-click-id="body"] div:nth-child(2) > div > a, .redditmaindiv div[data-click-id="body"] div:nth-child(2) > div > span {
     font-size: 10px !important;
     text-transform: lowercase;
     font-family: rfont,verdana, arial, helvetica, sans-serif; }
-  div[data-reactroot] div[data-click-id="body"] a[rel="noopener noreferrer"] {
+  .redditmaindiv div[data-click-id="body"] a[rel="noopener noreferrer"] {
     font-size: 10px; }
-  div[data-reactroot] div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
+  .redditmaindiv div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
     font-size: 10px; }
-  div[data-reactroot] span.comments {
+  .redditmaindiv span.comments {
     font-size: 11px;
     font-weight: bold; }
-  div[data-reactroot] span.comments.hundreds {
+  .redditmaindiv span.comments.hundreds {
     color: green; }
-  div[data-reactroot] span.comments.kk {
+  .redditmaindiv span.comments.kk {
     color: darkorange; }
-  div[data-reactroot] span.comments.tens {
+  .redditmaindiv span.comments.tens {
     color: blue; }
-  div[data-reactroot] span.comments.minus {
+  .redditmaindiv span.comments.minus {
     color: darkred; }
-  div[data-reactroot] a[data-click-id="comments"], div[data-reactroot] button[data-click-id="share"] {
+  .redditmaindiv a[data-click-id="comments"], .redditmaindiv button[data-click-id="share"] {
     font-weight: 700; }
-  div[data-reactroot] a[data-click-id="comments"]:hover, div[data-reactroot] button[data-click-id="share"]:hover, div[data-reactroot] .iUaEKt:hover {
+  .redditmaindiv a[data-click-id="comments"]:hover, .redditmaindiv button[data-click-id="share"]:hover, .redditmaindiv .iUaEKt:hover {
     background: transparent; }
-  div[data-reactroot] a[data-click-id="comments"]:hover .jlbfUu, div[data-reactroot] button[data-click-id="share"]:hover span {
+  .redditmaindiv a[data-click-id="comments"]:hover .jlbfUu, .redditmaindiv button[data-click-id="share"]:hover span {
     text-decoration: underline; }
-  div[data-reactroot] .icon-comment, div[data-reactroot] .icon-share {
+  .redditmaindiv .icon-comment, .redditmaindiv .icon-share {
     color: transparent !important;
     width: 1px;
     margin: 0;
     padding: 0; }
-  div[data-reactroot] div[data-click-id="body"] div, div[data-reactroot] div[data-click-id="body"] a {
+  .redditmaindiv div[data-click-id="body"] div, .redditmaindiv div[data-click-id="body"] a {
     left: 0;
     padding-left: 0;
     margin-left: 0;
     border: 0;
     border-right: 0; }
-  div[data-reactroot] div[data-click-id="body"] > div:nth-child(3), div[data-reactroot] div[data-click-id="body"] > div:nth-child(4) {
+  .redditmaindiv div[data-click-id="body"] > div:nth-child(3), .redditmaindiv div[data-click-id="body"] > div:nth-child(4) {
     padding-bottom: 0; }
-  div[data-reactroot] .scrollerItem {
+  .redditmaindiv .scrollerItem {
     border-radius: 5px; }
-  div[data-reactroot] .scrollerItem:nth-child(2) > div > div > div > a {
+  .redditmaindiv .scrollerItem:nth-child(2) > div > div > div > a {
     border-color: transparent; }
-  div[data-reactroot] .hovooK {
+  .redditmaindiv .hovooK {
     border-color: transparent; }
-  div[data-reactroot] .kOJuJT {
+  .redditmaindiv .kOJuJT {
     border-color: transparent; }
-  div[data-reactroot] .scrollerItem div[data-click-id="media"] {
+  .redditmaindiv .scrollerItem div[data-click-id="media"] {
     margin: 0;
     max-width: 600px;
     max-height: 400px; }
-  div[data-reactroot] .scrollerItem .md {
+  .redditmaindiv .scrollerItem .md {
     margin-left: 90px; }
-  div[data-reactroot] .scrollerItem > div:nth-child(2) > div:nth-child(2) > a > div {
+  .redditmaindiv .scrollerItem > div:nth-child(2) > div:nth-child(2) > a > div {
     justify-content: left;
     margin-left: 95px;
     max-width: 600px !important;
     max-height: 400px !important; }
-  div[data-reactroot] .scrollerItem img.media-element,
-  div[data-reactroot] .scrollerItem video,
-  div[data-reactroot] .scrollerItem .reddit-video-player-root,
-  div[data-reactroot] .scrollerItem .video-container,
-  div[data-reactroot] .scrollerItem .media-container,
-  div[data-reactroot] .scrollerItem .media-element {
+  .redditmaindiv .scrollerItem img.media-element,
+  .redditmaindiv .scrollerItem video,
+  .redditmaindiv .scrollerItem .reddit-video-player-root,
+  .redditmaindiv .scrollerItem .video-container,
+  .redditmaindiv .scrollerItem .media-container,
+  .redditmaindiv .scrollerItem .media-element {
     max-width: 600px !important;
     max-height: 400px !important; }
-  div[data-reactroot] .scrollerItem .media-element img {
+  .redditmaindiv .scrollerItem .media-element img {
     max-height: 100% !important; }
-  div[data-reactroot] .scrollerItem div[data-click-id="media"] > div:nth-child(2) {
+  .redditmaindiv .scrollerItem div[data-click-id="media"] > div:nth-child(2) {
     max-width: 600px !important;
     max-height: 400px !important;
     left: 90px !important; }
-  div[data-reactroot] .scrollerItem div[data-click-id="media"] > div:nth-child(2) a > div {
+  .redditmaindiv .scrollerItem div[data-click-id="media"] > div:nth-child(2) a > div {
     justify-content: left;
     left: -90px; }
-  div[data-reactroot] .scrollerItem div[data-click-id="media"] > div:nth-child(2) > div {
+  .redditmaindiv .scrollerItem div[data-click-id="media"] > div:nth-child(2) > div {
     max-width: 600px !important;
     max-height: 400px !important;
     margin: 0 0 0 0 !important; }
-  div[data-reactroot] .scrollerItem video {
+  .redditmaindiv .scrollerItem video {
     margin-left: 0 !important;
     margin-right: 0 !important;
     position: absolute; }
-  div[data-reactroot] .promotedlink {
+  .redditmaindiv .promotedlink {
     background: #ffd70045 !important;
     color: #009933 !important; }
-  div[data-reactroot] .promotedlink div[data-click-id="body"] a h2 {
+  .redditmaindiv .promotedlink div[data-click-id="body"] a h2 {
     color: #009933;
     font-weight: normal;
     font-size: 17px;
     font-family: rfont,sans-serif; }
-  div[data-reactroot] .promotedlink div[data-click-id="body"] a:hover h2 {
+  .redditmaindiv .promotedlink div[data-click-id="body"] a:hover h2 {
     color: #00933B;
     text-decoration: underline; }
-  div[data-reactroot] .promotedlink div[data-click-id="body"] a:visited h2 {
+  .redditmaindiv .promotedlink div[data-click-id="body"] a:visited h2 {
     color: #00933B;
     text-decoration: underline; }
 
 /*
     colors
 */
-body:not(.sr-nightmode) div[data-reactroot] .scrollerItem:hover {
+body:not(.sr-nightmode) .redditmaindiv .scrollerItem:hover {
   background-color: #e2ebf545 !important; }
-body:not(.sr-nightmode) div[data-reactroot] .Comment p a {
+body:not(.sr-nightmode) .redditmaindiv .Comment p a {
   color: #2200CC; }
-body:not(.sr-nightmode) div[data-reactroot] .Comment p a:hover {
+body:not(.sr-nightmode) .redditmaindiv .Comment p a:hover {
   color: #2A5DB0;
   text-decoration: underline; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-click-id="body"] a h2, body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="body"] h2 {
+body:not(.sr-nightmode) .redditmaindiv div[data-click-id="body"] a h2, body:not(.sr-nightmode) .redditmaindiv a[data-click-id="body"] h2 {
   color: #2200CC; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-click-id="body"] a:hover h2, body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="body"]:hover h2 {
+body:not(.sr-nightmode) .redditmaindiv div[data-click-id="body"] a:hover h2, body:not(.sr-nightmode) .redditmaindiv a[data-click-id="body"]:hover h2 {
   color: #2A5DB0; }
-body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="subreddit"] {
+body:not(.sr-nightmode) .redditmaindiv a[data-click-id="subreddit"] {
   color: #2A5DB0; }
-body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="subreddit"]:hover {
+body:not(.sr-nightmode) .redditmaindiv a[data-click-id="subreddit"]:hover {
   color: #2A5DB0; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-click-id="body"] a[rel="noopener noreferrer"] {
+body:not(.sr-nightmode) .redditmaindiv div[data-click-id="body"] a[rel="noopener noreferrer"] {
   color: grey; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-reactroot] a[data-click-id="body"]:visited h2 {
+body:not(.sr-nightmode) .redditmaindiv .redditmaindiv a[data-click-id="body"]:visited h2 {
   color: purple; }
-body:not(.sr-nightmode) div[data-reactroot] .visited, body:not(.sr-nightmode) div[data-reactroot] .visited h2 {
+body:not(.sr-nightmode) .redditmaindiv .visited, body:not(.sr-nightmode) .redditmaindiv .visited h2 {
   color: purple !important; }
-body:not(.sr-nightmode) div[data-reactroot] .Comment p a:visited {
+body:not(.sr-nightmode) .redditmaindiv .Comment p a:visited {
   color: purple !important; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-click-id="body"] a:visited h2, body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="body"]:visited h2 {
+body:not(.sr-nightmode) .redditmaindiv div[data-click-id="body"] a:visited h2, body:not(.sr-nightmode) .redditmaindiv a[data-click-id="body"]:visited h2 {
   color: purple !important; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
+body:not(.sr-nightmode) .redditmaindiv div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
   color: purple; }
-body:not(.sr-nightmode) div[data-reactroot] div[data-click-id="image"] {
+body:not(.sr-nightmode) .redditmaindiv div[data-click-id="image"] {
   border-color: white !important; }
-body:not(.sr-nightmode) div[data-reactroot] #lightbox > div {
+body:not(.sr-nightmode) .redditmaindiv #lightbox > div {
   background-color: white; }
-body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="comments"], body:not(.sr-nightmode) div[data-reactroot] button[data-click-id="share"] {
+body:not(.sr-nightmode) .redditmaindiv a[data-click-id="comments"], body:not(.sr-nightmode) .redditmaindiv button[data-click-id="share"] {
   color: #888; }
-body:not(.sr-nightmode) div[data-reactroot] a[data-click-id="comments"]:hover, body:not(.sr-nightmode) div[data-reactroot] button[data-click-id="share"]:hover, body:not(.sr-nightmode) div[data-reactroot] .iUaEKt:hover {
+body:not(.sr-nightmode) .redditmaindiv a[data-click-id="comments"]:hover, body:not(.sr-nightmode) .redditmaindiv button[data-click-id="share"]:hover, body:not(.sr-nightmode) .redditmaindiv .iUaEKt:hover {
   color: #2200CC !important; }
 
-body.sr-nightmode div[data-reactroot] .scrollerItem {
+body.sr-nightmode .redditmaindiv .scrollerItem {
   opacity: 0.8; }
-body.sr-nightmode div[data-reactroot] .scrollerItem:hover {
+body.sr-nightmode .redditmaindiv .scrollerItem:hover {
   opacity: 1;
   background-color: #44465a !important; }
-body.sr-nightmode div[data-reactroot] div[data-click-id="body"] a h2, body.sr-nightmode div[data-reactroot] a[data-click-id="body"] h2 {
+body.sr-nightmode .redditmaindiv div[data-click-id="body"] a h2, body.sr-nightmode .redditmaindiv a[data-click-id="body"] h2 {
   color: #fefefe; }
-body.sr-nightmode div[data-reactroot] div[data-reactroot] a[data-click-id="body"]:visited h2 {
+body.sr-nightmode .redditmaindiv .redditmaindiv a[data-click-id="body"]:visited h2 {
   color: #b192cb; }
-body.sr-nightmode div[data-reactroot] .visited, body.sr-nightmode div[data-reactroot] .visited h2 {
+body.sr-nightmode .redditmaindiv .visited, body.sr-nightmode .redditmaindiv .visited h2 {
   color: #b192cb !important; }
-body.sr-nightmode div[data-reactroot] .Comment p a:visited {
+body.sr-nightmode .redditmaindiv .Comment p a:visited {
   color: #b192cb !important; }
-body.sr-nightmode div[data-reactroot] div[data-click-id="body"] a:visited h2, body.sr-nightmode div[data-reactroot] a[data-click-id="body"]:visited h2 {
+body.sr-nightmode .redditmaindiv div[data-click-id="body"] a:visited h2, body.sr-nightmode .redditmaindiv a[data-click-id="body"]:visited h2 {
   color: #b192cb !important; }
-body.sr-nightmode div[data-reactroot] div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
+body.sr-nightmode .redditmaindiv div[data-click-id="body"] a[rel="noopener noreferrer"]:visited {
   color: #b192cb; }
-body.sr-nightmode div[data-reactroot] div[data-click-id="image"] {
+body.sr-nightmode .redditmaindiv div[data-click-id="image"] {
   border-color: #111 !important; }
-body.sr-nightmode div[data-reactroot] .scrollerItem:hover a {
+body.sr-nightmode .redditmaindiv .scrollerItem:hover a {
   color: #efefef; }
-body.sr-nightmode div[data-reactroot] .scrollerItem:hover a[data-click-id="comments"], body.sr-nightmode div[data-reactroot] .scrollerItem:hover button[data-click-id="share"] {
+body.sr-nightmode .redditmaindiv .scrollerItem:hover a[data-click-id="comments"], body.sr-nightmode .redditmaindiv .scrollerItem:hover button[data-click-id="share"] {
   color: #efefef; }
