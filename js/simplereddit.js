@@ -32,6 +32,8 @@ setInterval(hideUselessExpando, 3000);
 hideHamburger();
 setTimeout(hideHamburger, 1500);
 
+setInterval(lightBoxBackgroundClick, 1000);
+
 attachLinks();
 setTimeout(attachLinks, 250);
 setTimeout(attachLinks, 500);
@@ -277,6 +279,32 @@ function hideHamburger() {
 				if (button && button.length > 0 && !!button[0]) {
 					button[0].click();
 				}
+			}
+		}
+	}
+}
+
+function lightBoxBackgroundClick() {
+	var lightbox = document.getElementById('lightbox');
+	if(!!lightbox) {
+		lightbox.removeEventListener("click", backgroundClose);
+		lightbox.addEventListener("click", backgroundClose);
+	}
+}
+
+function backgroundClose(e) {
+	if(!!e && !!e.target && e.target == document.getElementById('lightbox')) {
+		var aTags = document.getElementsByTagName("span");
+		var searchText = "Close";
+		var found;
+
+		for (var i = 0; i < aTags.length; i++) {
+			if (aTags[i].textContent == searchText) {
+				found = aTags[i];
+				if(!!found && !!found.parentElement) {
+					found.parentElement.click();
+				}
+				return;
 			}
 		}
 	}
