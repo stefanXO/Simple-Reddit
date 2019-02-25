@@ -32,8 +32,12 @@ setInterval(hideUselessExpando, 3000);
 hideHamburger();
 setTimeout(hideHamburger, 1500);
 
-attachProfileLink();
-setInterval(attachProfileLink, 1500);
+attachLinks();
+setTimeout(attachLinks, 250);
+setTimeout(attachLinks, 500);
+setTimeout(attachLinks, 750);
+setTimeout(attachLinks, 1000);
+setInterval(attachLinks, 1500);
 /*
 	Get local storage settings for the extension
 	Apply default layout switching if the option is set
@@ -114,6 +118,12 @@ chrome.storage.sync.get(['simple-reddit-force-layout', 'simple-reddit-default-la
 	}
 });
 
+function attachLinks() {
+	attachProfileLink();
+}
+
+window.username = "";
+
 function attachProfileLink() {
 	var dropdown = document.getElementById('USER_DROPDOWN_ID');
 	if(	!!dropdown &&
@@ -124,8 +134,9 @@ function attachProfileLink() {
 	) {
 		var usernameChild = dropdown.firstElementChild.firstElementChild.children[1].firstElementChild;
 		if(!!usernameChild) {
-			var username = dropdown.firstElementChild.firstElementChild.children[1].firstElementChild.innerText;
+			var username = dropdown.firstElementChild.firstElementChild.children[1].firstElementChild.textContent;
 			if(!username || username.length < 1 || username.indexOf("\n") > -1 || username.indexOf("|") > -1) return;
+			window.username = username;
 
 			var a = document.createElement('a');
 			var linkText = document.createTextNode(username);
